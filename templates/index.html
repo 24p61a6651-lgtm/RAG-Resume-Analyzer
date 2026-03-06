@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume RAG System</title>
+</head>
+
+<body>
+
+<h2>Resume Analysis System</h2>
+
+<h3>Upload Resume</h3>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="resume" required>
+    <button type="submit">Upload</button>
+</form>
+
+<hr>
+
+<h3>Ask Question</h3>
+
+<form action="/ask" method="post">
+
+<input type="text" name="question" placeholder="Ask something about the resume" size="50">
+
+<button type="submit">Ask</button>
+
+</form>
+
+{% if answer %}
+<h3>Answer:</h3>
+<p>{{answer}}</p>
+{% endif %}
+
+</body>
+</html>
